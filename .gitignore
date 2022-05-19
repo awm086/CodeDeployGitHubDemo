@@ -1,0 +1,170 @@
+# Prevent accidental export of Acquia Connector settings
+config/default/acquia_connector.settings.yml
+
+# Ignore configuration files that may contain sensitive information.
+local.settings.php
+local.drush.yml
+local.site.yml
+local.services.yml
+tests/behat/local.yml
+box/local.config.yml
+*.local
+local.blt.yml
+settings.local.php
+
+# Ignore drupal core.
+/app/drupal/core
+
+# Ignore paths that contain user-generated content.
+/app/drupal/sites/*/files
+/files-private
+/app/drupal/sites/*/private
+
+# Ignore contrib modules. These should be created during build process.
+/app/drupal/modules/contrib
+/app/drupal/themes/contrib
+/app/drupal/profiles/contrib
+/app/drupal/libraries
+drush/Commands
+
+# Ignore custom theme build artifacts
+/app/drupal/themes/custom/*/node_modules
+/app/drupal/themes/custom/*/css
+/app/drupal/themes/custom/*/styleguide
+
+# Ignore build artifacts
+deployment_identifier
+/deploy
+bin/*
+tmp
+reports
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Eclipse
+*.pydevproject
+.project
+.metadata
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpathk
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# User-specific stuff:
+.idea/
+
+#XHProf
+xhprof_*
+
+#Composer vendor
+vendor/
+vendor/.git
+
+#Sass
+.sass-cache
+*.css.map
+
+#Netbeans IDE
+nbproject
+nbproject/*
+
+# DrupalVM
+.vagrant/
+
+# DevDesktop
+*.dd
+
+#Exports
+*.gz
+*.sql
+*.zip
+
+# PHPStorm
+atlassian-ide-plugin.xml
+
+#NPM
+npm-debug.log
+
+# Drush 9 Checksums
+drush/sites/.checksums
+
+# Deprecation detector rules
+.rules
+
+# Ignore intellij files
+*.iml
+/app/drupal/*.iml
+
+/scripts/images/import/.env
+/scripts/images/import/config/database.yml
+/scripts/images/sync/output/*.csv
+/venv
+/scripts/images/cumulus/node_modules
+/scripts/images/cumulus/dist
+/scripts/images/cumulus/output/*.json
+/scripts/images/cumulus/data/*.csv
+
+# BLT 11.2.0 update to support simulated deploys
+/travis_wait*
+
+# DDEV Local specific
+/.ddev/build
+/.ddev/homeadditions/.gitconfig
+/.ddev/docker-compose.environment.yml
+/app/drupal/sites/default/settings.ddev.overrides.php
+# Lando Local specific
+/.lando/.env
+
+# Ignore PHPUnit generated files
+/app/drupal/sites/simpletest/
+tests/phpunit/.phpunit.result.cache
+# Ignore compiled twig templates
+storage/php

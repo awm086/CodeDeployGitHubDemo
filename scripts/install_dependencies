@@ -1,3 +1,8 @@
 #!/bin/bash
-#yum install -y httpd
-
+sudo apt install php-all-dev
+sudo apt install php-intl
+sudo apt install php-mbstring
+curl -s https://getcomposer.org/installer | php
+mv composer.phar ~/.local/bin/composer
+cd /app/drupal
+composer install -n

@@ -1,2 +1,2 @@
 #!/bin/bash
-#rm -R /home/bitnami/stack/drupal
+rm -R /home/bitnami/stack/drupal

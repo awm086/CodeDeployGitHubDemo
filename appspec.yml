@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /app/lpcms/
+  - source: /app/drupal
     destination: /home/bitnami/stack/drupal
 hooks:
   BeforeInstall:

@@ -13,24 +13,24 @@ local.blt.yml
 settings.local.php
 
 # Ignore drupal core.
-/app/drupal/core
+app/drupal/web/core
 
 # Ignore paths that contain user-generated content.
-/app/drupal/sites/*/files
+app/drupal/web/sites/*/files
 /files-private
-/app/drupal/sites/*/private
+app/drupal/web/sites/*/private
 
 # Ignore contrib modules. These should be created during build process.
-/app/drupal/modules/contrib
-/app/drupal/themes/contrib
-/app/drupal/profiles/contrib
-/app/drupal/libraries
+app/drupal/web/modules/contrib
+app/drupal/web/themes/contrib
+app/drupal/web/profiles/contrib
+app/drupal/web/libraries
 drush/Commands
 
 # Ignore custom theme build artifacts
-/app/drupal/themes/custom/*/node_modules
-/app/drupal/themes/custom/*/css
-/app/drupal/themes/custom/*/styleguide
+app/drupal/web/themes/custom/*/node_modules
+app/drupal/web/themes/custom/*/css
+app/drupal/web/themes/custom/*/styleguide
 
 # Ignore build artifacts
 deployment_identifier
@@ -104,9 +104,9 @@ tramp
 #XHProf
 xhprof_*
 
-#Composer vendor
-vendor/
-vendor/.git
+#Composer app/drupal/vendor
+app/drupal/vendor/
+app/drupal/vendor/.git
 
 #Sass
 .sass-cache
@@ -141,7 +141,7 @@ drush/sites/.checksums
 
 # Ignore intellij files
 *.iml
-/app/drupal/*.iml
+app/drupal/web/*.iml
 
 /scripts/images/import/.env
 /scripts/images/import/config/database.yml
@@ -159,12 +159,12 @@ drush/sites/.checksums
 /.ddev/build
 /.ddev/homeadditions/.gitconfig
 /.ddev/docker-compose.environment.yml
-/app/drupal/sites/default/settings.ddev.overrides.php
+app/drupal/web/sites/default/settings.ddev.overrides.php
 # Lando Local specific
 /.lando/.env
 
 # Ignore PHPUnit generated files
-/app/drupal/sites/simpletest/
+app/drupal/web/sites/simpletest/
 tests/phpunit/.phpunit.result.cache
 # Ignore compiled twig templates
 storage/php

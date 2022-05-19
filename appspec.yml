@@ -3,10 +3,12 @@ os: linux
 files:
   - source: /app/drupal/
     destination: /home/bitnami/stack/drupal/
+    file_exists_behavior: OVERWRITE
+
 hooks:
   BeforeInstall:
     - location: scripts/rmoldsite.sh
-      timeout: 120
+      timeout: 300
       runas: root
     # - location: scripts/install_dependencies
     #   timeout: 300

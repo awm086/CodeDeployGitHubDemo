@@ -1,8 +1,8 @@
 #!/bin/bash
-sudo apt install php-all-dev -y
-sudo apt install php-intl -y
-sudo apt install php-mbstring -y
-curl -s https://getcomposer.org/installer | php
-mv composer.phar ~/.local/bin/composer
+# sudo apt install php-all-dev -y
+# sudo apt install php-intl -y
+# sudo apt install php-mbstring -y
+# curl -s https://getcomposer.org/installer | php
+# mv composer.phar ~/.local/bin/composer
 cd /app/drupal
 composer install -n
